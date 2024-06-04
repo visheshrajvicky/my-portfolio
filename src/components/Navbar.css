@@ -1,0 +1,59 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #282c34;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 1000;
+  }
+  
+  .navbar .logo {
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  .navbar .menu {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .navbar .menu a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .navbar .menu a:hover {
+    color: #61dafb;
+  }
+  
+  .navbar .toggle {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar .menu {
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #282c34;
+      width: 100%;
+      display: none;
+    }
+  
+    .navbar .menu.open {
+      display: flex;
+    }
+  
+    .navbar .toggle {
+      display: block;
+    }
+  }
+  

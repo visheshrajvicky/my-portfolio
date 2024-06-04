@@ -1,0 +1,11 @@
+.icon-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .icon-link svg {
+    margin-right: 5px;
+  }
+  

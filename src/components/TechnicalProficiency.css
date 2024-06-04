@@ -1,0 +1,34 @@
+.technical-proficiency {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .technical-proficiency h2 {
+    margin-top: 0;
+  }
+  
+  .technical-proficiency .skills {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .blockchain-skills, .security-skills {
+    flex-basis: 45%;
+  }
+  
+  .blockchain-skills h3, .security-skills h3 {
+    margin-top: 0;
+  }
+  
+  .blockchain-skills ul, .security-skills ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  
+  .blockchain-skills ul li, .security-skills ul li {
+    margin-bottom: 5px;
+  }
+  

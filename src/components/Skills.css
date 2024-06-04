@@ -1,0 +1,127 @@
+.skills {
+  padding: 2rem;
+  background: linear-gradient(135deg, #000000, #362050);
+  color: white;
+}
+
+.skills h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.skills-content {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.skill {
+  flex: 1;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+  height: 150px;
+}
+
+.skill:hover {
+  transform: scale(1.05);
+}
+
+.skill h3 {
+  margin: 1rem 0;
+}
+
+.skill svg {
+  font-size: 4rem;
+  color: #61dafb;
+}
+
+.auto-scroll {
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding: 1rem 0;
+  scroll-behavior:smooth;
+  margin-top: 30px;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+}
+
+.auto-scroll::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.skill-card {
+  flex: 0 0 auto;
+  width: 100px;
+  height: 130px;
+  margin: 0 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+}
+
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-divider {
+  height: 1px;
+  width: 80%;
+  background: linear-gradient(to right, transparent, #61dafb, transparent);
+  margin-bottom: 1rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.skill-name {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+  .skills-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    margin-bottom: 1rem;
+  }
+
+  .auto-scroll {
+    justify-content: center;
+  }
+
+  .skill-card {
+    width: 80px;
+    height: 110px;
+  }
+
+  .skill-card img {
+    width: 40px;
+    height: 40px;
+  }
+}
