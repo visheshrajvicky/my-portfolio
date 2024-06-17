@@ -99,7 +99,7 @@ const ProjectCard = ({ project }) => (
     <img src={project.imageUrl} alt={project.title} className="project-image" />
     <div className="project-content">
       <h3>{project.title}</h3>
-      <p>{project.shortDescription}</p>
+      <p style={{height: '76px'}}>{project.shortDescription}</p>
       <div className="project-details">
         <p><strong>Technology:</strong> {project.details.technology}</p>
         <p><strong>Programming Language:</strong> {project.details.programmingLanguage}</p>

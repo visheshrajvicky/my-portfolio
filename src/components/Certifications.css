@@ -38,6 +38,8 @@
   color: #61dafb;
   text-align: center;
   padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .cert-content {

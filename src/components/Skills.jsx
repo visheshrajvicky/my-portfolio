@@ -91,13 +91,18 @@ const Skills = () => {
     {
       skill: "Cryptography",
       logo: "https://media.licdn.com/dms/image/C5612AQHmCP3w-r6k0Q/article-cover_image-shrink_720_1280/0/1630841963428?e=1723075200&v=beta&t=HOs9V8qTj5xO4-VI5iNOqgMi7yWukPOencZF5C8dX9c"
+    },
+
+    {
+      skill: "BurpSuite",
+      logo: "https://www.kali.org/tools/burpsuite/images/burpsuite-logo.svg"
     }
   ];
 
   const blockchainSkills = allSkills.slice(0, 5);
   const networkSkills = allSkills.slice(5, 9);
   const backendSkills = allSkills.slice(9, 19);
-  const securitySkills = allSkills.slice(19, 22);
+  const securitySkills = allSkills.slice(19, 23);
 
   const scrollContainerRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
