@@ -35,9 +35,30 @@ const Experience = () => {
           <div className="card-ex" onClick={toggleDetails}>
             <img src={companyLogo} alt="Company Logo" className="company-logo" />
             <div className="job-summary">
+              <h3>Project Lead & Security Researcher</h3>
+              <h4>1GEN Social Innovation Lab</h4>
+              <p>OCT 2023 - Present</p>
+            </div>
+          </div>
+          <br />
+
+          <div className="card-ex" onClick={toggleDetails}>
+            <img src={companyLogo} alt="Company Logo" className="company-logo" />
+            <div className="job-summary">
               <h3>Senior Blockchain Engineer</h3>
               <h4>1GEN Social Innovation Lab</h4>
-              <p>1st July 2021 - Present</p>
+              <p>OCT 2022 - 2023</p>
+            </div>
+          </div>
+
+          <br />
+
+          <div className="card-ex" onClick={toggleDetails}>
+            <img src={companyLogo} alt="Company Logo" className="company-logo" />
+            <div className="job-summary">
+              <h3>Blockchain Engineer</h3>
+              <h4>1GEN Social Innovation Lab</h4>
+              <p>JUL 2021 - 2022</p>
             </div>
           </div>
 

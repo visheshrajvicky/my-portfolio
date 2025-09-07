@@ -4,10 +4,10 @@ import './Certifications.css';
 
 const certifications = [
   {
-    title: 'Foundations of Cybersecurity',
+    title: 'Google Cyber Secuirty Professional Certificate',
     provider: 'Courera: Google',
     logo: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-Logo_600x600.svg',
-    link: 'https://drive.google.com/file/d/1ODUSM6-1TTJRZvt8jQO2DH-xz7KNMqeD/view?usp=sharing',
+    link: 'https://drive.google.com/file/d/1eJjOguShpQGymABjf6JE44Lv7249c8pA/view?usp=sharing',
   },
 
   {

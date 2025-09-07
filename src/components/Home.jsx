@@ -3,6 +3,8 @@ import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from 'react-icons/fa';
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import mypic from '../assets/mypic.png';
+import google from '../assets/googleCyber.png';
+import blockchain from '../assets/blokchain.png';
 import './Home.css';
 import {ReactTyped, Typed} from 'react-typed';
 
@@ -48,8 +50,8 @@ const Home = () => {
           loop
         />
         <div className="images">
-          <img src="https://source.unsplash.com/1600x900/?blockchain" alt="Blockchain" />
-          <img src="https://source.unsplash.com/1600x900/?cybersecurity" alt="Cybersecurity" />
+          <img src={blockchain} alt="Blockchain" />
+          <img src={google} alt="Cybersecurity" />
         </div>
         <div className="contact-info">
           <a href="https://linkedin.com/in/vishesh-raj-56078a119"><FaLinkedin /></a>
