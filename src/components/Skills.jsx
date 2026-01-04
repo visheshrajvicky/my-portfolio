@@ -5,8 +5,36 @@ import './Skills.css';
 const Skills = () => {
   const allSkills = [
     {
+      skill: "Elasticsearch",
+      logo: "https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt36f2da8d650732a0/5d0823c3d8ff351753cbc99f/logo-elasticsearch-32-color.svg"
+    },
+    {
+      skill: "Kibana",
+      logo: "https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/bltb35193323e8e0444/5d082d34616162aa5a85707c/logo-kibana-32-color.svg"
+    },
+    {
+      skill: "Docker",
+      logo: "https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png"
+    },
+    {
+      skill: "AWS",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+    },
+    {
+      skill: "Meltano",
+      logo: "https://meltano.com/images/meltano-logo.svg"
+    },
+    {
+      skill: "Python",
+      logo: "https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"
+    },
+    {
       skill: "Ethereum",
       logo: "https://upload.wikimedia.org/wikipedia/commons/0/05/Ethereum_logo_2014.svg"
+    },
+    {
+      skill: "Solana",
+      logo: "https://cryptologos.cc/logos/solana-sol-logo.svg?v=029"
     },
     {
       skill: "Hyperledger",
@@ -33,12 +61,12 @@ const Skills = () => {
       logo: "https://www.wireshark.org/assets/img/wireshark-logo.png"
     },
     {
-      skill: "Network Security",
-      logo: "https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQLDkY7hwKlI3p6r383CoUrg8SGeq3fhmXaiYV_z5TkuPNFFCkMNeW7hpX-04K01VZS"
+      skill: "Metasploit",
+      logo: "https://www.metasploit.com/images/metasploit-r7-logo.svg"
     },
     {
-      skill: "Analysis",
-      logo: "https://cdn.paperpile.com/guides/img/content-analysis-illustr-400x400.png?v=246"
+      skill: "Network Security",
+      logo: "https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcQLDkY7hwKlI3p6r383CoUrg8SGeq3fhmXaiYV_z5TkuPNFFCkMNeW7hpX-04K01VZS"
     },
     {
       skill: "Nodejs",
@@ -57,14 +85,6 @@ const Skills = () => {
       logo: "https://webassets.mongodb.com/_com_assets/cms/mongodb-logo-rgb-j6w271g1xn.jpg"
     },
     {
-      skill: "Python",
-      logo: "https://www.python.org/static/community_logos/python-logo-master-v3-TM.png"
-    },
-    {
-      skill: "Flask",
-      logo: "https://flask.palletsprojects.com/en/2.0.x/_images/flask-logo.png"
-    },
-    {
       skill: "React",
       logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
     },
@@ -73,36 +93,27 @@ const Skills = () => {
       logo: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
     },
     {
-      skill: "HTML",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
-    },
-    {
-      skill: "CSS",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+      skill: "Linux",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg"
     },
     {
       skill: "Pen Testing",
       logo: "https://pentest-tools.com/images/logos/pentesttools-logomark.svg"
     },
     {
-      skill: "Vulnerability",
-      logo: "https://ih1.redbubble.net/image.452180694.4771/flat,750x,075,f-pad,750x1000,f8f8f8.u1.jpg"
-    },
-    {
       skill: "Cryptography",
       logo: "https://media.licdn.com/dms/image/C5612AQHmCP3w-r6k0Q/article-cover_image-shrink_720_1280/0/1630841963428?e=1723075200&v=beta&t=HOs9V8qTj5xO4-VI5iNOqgMi7yWukPOencZF5C8dX9c"
     },
-
     {
       skill: "BurpSuite",
       logo: "https://www.kali.org/tools/burpsuite/images/burpsuite-logo.svg"
     }
   ];
 
-  const blockchainSkills = allSkills.slice(0, 5);
-  const networkSkills = allSkills.slice(5, 9);
-  const backendSkills = allSkills.slice(9, 19);
-  const securitySkills = allSkills.slice(19, 23);
+  const dataSkills = allSkills.slice(0, 5);
+  const blockchainSkills = allSkills.slice(5, 12);
+  const securitySkills = allSkills.slice(12, 16);
+  const backendSkills = allSkills.slice(16, 27);
 
   const scrollContainerRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -145,6 +156,14 @@ const Skills = () => {
       <div className="skills-content">
         <div
           className="skill"
+          onMouseEnter={() => handleMouseEnter(dataSkills)}
+          onMouseLeave={handleMouseLeave}
+        >
+          <FaServer />
+          <h3>Data Platforms</h3>
+        </div>
+        <div
+          className="skill"
           onMouseEnter={() => handleMouseEnter(blockchainSkills)}
           onMouseLeave={handleMouseLeave}
         >
@@ -153,27 +172,19 @@ const Skills = () => {
         </div>
         <div
           className="skill"
-          onMouseEnter={() => handleMouseEnter(networkSkills)}
+          onMouseEnter={() => handleMouseEnter(securitySkills)}
           onMouseLeave={handleMouseLeave}
         >
-          <FaNetworkWired />
-          <h3>Networking</h3>
+          <FaShieldAlt />
+          <h3>Security</h3>
         </div>
         <div
           className="skill"
           onMouseEnter={() => handleMouseEnter(backendSkills)}
           onMouseLeave={handleMouseLeave}
         >
-          <FaServer />
-          <h3>MERN STACK</h3>
-        </div>
-        <div
-          className="skill"
-          onMouseEnter={() => handleMouseEnter(securitySkills)}
-          onMouseLeave={handleMouseLeave}
-        >
-          <FaShieldAlt />
-          <h3>Security</h3>
+          <FaNetworkWired />
+          <h3>Full Stack</h3>
         </div>
       </div>
 

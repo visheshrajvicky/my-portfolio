@@ -6,7 +6,7 @@ import mypic from '../assets/mypic.png';
 import google from '../assets/googleCyber.png';
 import blockchain from '../assets/blokchain.png';
 import './Home.css';
-import {ReactTyped, Typed} from 'react-typed';
+import {ReactTyped} from 'react-typed';
 
 const Home = () => {
   const controls = useAnimation();
@@ -31,19 +31,19 @@ const Home = () => {
         animate={controls}
       >
         <div className="myimages">
-          <img src={mypic} alt="My Photo" />
+          <img src={mypic} alt="Vishesh Raj Profile" />
         </div>
 
         <h1>Vishesh Raj</h1>
         <ReactTyped
           className="typed-text"
           strings={[
-            'Project Lead',
-            'Blockchain Developer',
-            'Smart Contract Developer',
+            'Senior Integration Engineer',
+            'Data Platform Architect',
+            'Blockchain Engineer',
             'Security Researcher',
-            'Cybersecurity Enthusiast',
-            // 'Decentralized Systems Advocate',
+            'Full Stack Developer',
+            'Cybersecurity Professional',
           ]}
           typeSpeed={40}
           backSpeed={50}
@@ -73,7 +73,7 @@ const Home = () => {
           <ReactTyped
             className="typed-text"
             strings={[
-              'A skilled Project Lead of Blockchain and Security Teams with 3 years of relevant experience. I have done research in blockchain and information security for 2 years during my master\'s and I have been part of several private bug bounty programs on HackerOne for penetration and security testing with a proven track record of success in extraordinary results. Deep understanding of distributed ledger, blockchain design principles, and various protocols and environments. Currently appointed as a Project Lead of 10 member teams, building ultimate apps for environmental enthusiasts and changemakers project "EarthBeat" available on Android and iOS.',
+              'Senior Integration Engineer with 4+ years of experience across data platforms, blockchain systems, and cybersecurity. Currently focused on designing scalable data pipelines and Meltano-inspired ELT frameworks to ingest, normalize, and index data from diverse sources into Elasticsearch. Strong background in security testing, distributed systems, and identity-centric architectures, with a proven ability to collaborate across product and engineering teams to build reliable, enterprise-grade data and identity platforms.',
             ]}
             typeSpeed={40}
             backSpeed={50}

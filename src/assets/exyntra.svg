@@ -1,0 +1,11 @@
+--2026-01-04 19:47:37--  https://www.exyntra.com/logo.svg
+Resolving www.exyntra.com (www.exyntra.com)... 13.211.192.216
+Connecting to www.exyntra.com (www.exyntra.com)|13.211.192.216|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1078 (1.1K) [image/svg+xml]
+Saving to: ‘logo.svg’
+
+     0K .                                                     100% 27.4M=0s
+
+2026-01-04 19:47:38 (27.4 MB/s) - ‘logo.svg’ saved [1078/1078]
+

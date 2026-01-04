@@ -1,108 +1,263 @@
-:root {
-  --primary-color: #61dafb;
-  --secondary-color: #282c34;
-  --text-color: white;
-  --background-color: #f0f0f0;
-  --light-dark-bg: #3b3b3b;
-}
-
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-}
-
 .experience {
-  padding: 2rem;
-  /* background: var(--light-dark-bg); */
-  /* background: linear-gradient(135deg, #000000, #00ff99); */
-  /* background: linear-gradient(135deg, #000000, #00b894); */
-  background: linear-gradient(135deg, #000000, #362050);
+  padding: 120px 2rem 80px;
+  background: var(--primary-bg);
+  position: relative;
+  min-height: 100vh;
+}
 
-
-  color: var(--text-color);
+.experience::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .experience h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
-  margin-bottom: 2rem;
-  color: var(--primary-color);
+  margin-bottom: 4rem;
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.experience h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--gradient-secondary);
+  border-radius: var(--radius-full);
 }
 
 .experience-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: start;
 }
 
-.animation-container, .job-container {
-  flex: 1;
+.animation-container {
+  position: sticky;
+  top: 140px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.job-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .card-ex {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2));
-  padding: 1.5rem;
-  border-radius: 10px;
+  background: rgba(20, 27, 51, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
   cursor: pointer;
   display: flex;
   align-items: center;
-  text-align: left;
-  transition: transform 0.3s ease;
-  width: 80%;
+  gap: 1.5rem;
+  transition: all var(--transition-normal);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-ex::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--gradient-secondary);
+  opacity: 0.1;
+  transition: width var(--transition-slow);
 }
 
 .card-ex:hover {
-  transform: scale(1.05);
+  transform: translateY(-8px);
+  border-color: rgba(0, 217, 255, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 217, 255, 0.2),
+              0 0 0 1px rgba(0, 217, 255, 0.1);
+}
+
+.card-ex:hover::before {
+  width: 100%;
 }
 
 .company-logo {
-  width: 130px;
-  height: 70px;
-  margin-right: 1rem;
-  /* border-radius: 50%; */
+  width: 140px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.75rem;
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
 }
 
-.job-summary h3, .job-summary h4, .job-summary p {
-  margin: 0.5rem 0;
+.card-ex:hover .company-logo {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.job-summary {
+  flex: 1;
+  text-align: left;
+}
+
+.job-summary h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.job-summary h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.job-summary p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .job-details {
-  margin-top: 1rem;
-  background: rgba(47, 41, 53, 0.7);
-  padding: 1rem;
-  border-radius: 10px;
-  width: 80%;
-  text-align: left;
+  margin-top: 1.5rem;
+  background: rgba(20, 27, 51, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  animation: fadeInUp 0.5s ease-out;
 }
 
 .job-details ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .job-details ul li {
-  margin: 0.5rem 0;
-  padding-left: 1.5rem;
+  margin: 1rem 0;
+  padding-left: 2rem;
   position: relative;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.95rem;
 }
 
 .job-details ul li::before {
-  content: '•';
+  content: '';
   position: absolute;
   left: 0;
-  color: var(--primary-color);
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  background: var(--gradient-secondary);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+}
+
+.job-details ul li:hover {
+  color: var(--text-primary);
+  padding-left: 2.25rem;
+  transition: all var(--transition-normal);
+}
+
+@media (max-width: 1024px) {
+  .experience-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .animation-container {
+    position: relative;
+    top: 0;
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 768px) {
-  .experience-content {
-    flex-direction: column;
-    align-items: center;
+  .experience {
+    padding: 100px 1rem 60px;
   }
 
-  .animation-container, .job-container {
-    max-width: 100%;
+  .experience h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .card-ex {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .company-logo {
+    width: 120px;
+    height: 70px;
+  }
+
+  .job-summary {
+    text-align: center;
+  }
+
+  .job-summary h3 {
+    font-size: 1.25rem;
+  }
+
+  .job-summary h4 {
+    font-size: 1rem;
+  }
+
+  .job-details {
+    padding: 1.5rem;
+  }
+
+  .job-details ul li {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-ex {
+    padding: 1.25rem;
+  }
+
+  .company-logo {
+    width: 100px;
+    height: 60px;
+  }
+
+  .job-summary h3 {
+    font-size: 1.1rem;
+  }
+
+  .job-details {
+    padding: 1.25rem;
   }
 }

@@ -6,6 +6,19 @@ import nfttree from '../assets/nfttree.png';
 import car from '../assets/car.webp';
 
 const securityProjects = [
+  {
+    title: 'AIDNA – AI-driven Data & Identity Platform',
+    shortDescription: 'Enterprise-grade platform that ingests, normalizes, and enriches data from diverse sources to build a unified, real-time customer view under strict security and compliance controls.',
+    details: {
+      technology: 'Python, Data Pipelines, Event Streaming, Airflow, DAGs, Elasticsearch, Meltano',
+      categories: "Data Platform",
+      programmingLanguage: 'Python',
+      date: 'October 2025 - Present'
+    },
+    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop',
+    icon: <FaLock />,
+    githubLink: 'https://github.com/visheshrajvicky'
+  },
 
   {
     title: 'Earthbeat',
@@ -60,7 +73,7 @@ const blockchainProjects = [
       programmingLanguage: 'JavaScript',
       date: 'June 2020 - March 2021'
     },
-    imageUrl: 'https://nordvpn.com/wp-content/uploads/blog-social-securing-cryptocurrency-a-way-out-of-the-hackers-target.svg',
+    imageUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2070&auto=format&fit=crop',
     icon: <FaEthereum />,
     githubLink: 'https://github.com/visheshrajvicky/Blockchain-Based-Authentication' // Replace with your actual GitHub link
   },

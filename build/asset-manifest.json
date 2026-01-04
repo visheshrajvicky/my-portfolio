@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/my-portfolio/static/css/main.5734b715.css",
-    "main.js": "/my-portfolio/static/js/main.cfa5c272.js",
+    "main.css": "/my-portfolio/static/css/main.ed481e67.css",
+    "main.js": "/my-portfolio/static/js/main.19a6f118.js",
     "static/media/nfttree.png": "/my-portfolio/static/media/nfttree.2ea42b2cdd063744511c.png",
     "static/media/cpabe.png": "/my-portfolio/static/media/cpabe.c54aa7a27fb0ea4ad849.png",
     "static/media/mypic.png": "/my-portfolio/static/media/mypic.6875568729e580d03812.png",
+    "static/media/googleCyber.png": "/my-portfolio/static/media/googleCyber.569d7e9d4c05aec84772.png",
     "static/media/1gen.png": "/my-portfolio/static/media/1gen.b27fd484fcd02b177caa.png",
+    "static/media/blokchain.png": "/my-portfolio/static/media/blokchain.8f9ef413a4b35e79824e.png",
     "static/media/car.webp": "/my-portfolio/static/media/car.3def8c7d3ab5a563b8e9.webp",
     "static/media/iitjammu.png": "/my-portfolio/static/media/iitjammu.4e8a522fc1c7f40f05ca.png",
     "static/media/rgpv.png": "/my-portfolio/static/media/rgpv.3b2be5aafaf4c16c32ec.png",
+    "static/media/logo-exyntra.svg": "/my-portfolio/static/media/logo-exyntra.a4b5b62e0589cc2d8026766b55dec321.svg",
     "index.html": "/my-portfolio/index.html",
-    "main.5734b715.css.map": "/my-portfolio/static/css/main.5734b715.css.map",
-    "main.cfa5c272.js.map": "/my-portfolio/static/js/main.cfa5c272.js.map"
+    "main.ed481e67.css.map": "/my-portfolio/static/css/main.ed481e67.css.map",
+    "main.19a6f118.js.map": "/my-portfolio/static/js/main.19a6f118.js.map"
   },
   "entrypoints": [
-    "static/css/main.5734b715.css",
-    "static/js/main.cfa5c272.js"
+    "static/css/main.ed481e67.css",
+    "static/js/main.19a6f118.js"
   ]
 }
