@@ -205,13 +205,19 @@
 @media (max-width: 1024px) {
   .project-sections {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
+  }
+
+  .project-card {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 
 @media (max-width: 768px) {
   .project-page {
-    padding: 100px 1rem 60px;
+    padding: 90px 1rem 50px;
   }
 
   .project-page h2 {
@@ -220,7 +226,7 @@
   }
 
   .project-sections {
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .project-content {
@@ -228,17 +234,35 @@
   }
 
   .project-content h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .project-content > p {
+    font-size: 0.9rem;
+    min-height: auto;
   }
 
   .project-image {
     height: 200px;
   }
+
+  .project-details {
+    padding: 0.875rem;
+  }
+
+  .project-details p {
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 480px) {
+  .project-page {
+    padding: 80px 0.75rem 40px;
+  }
+
   .project-icon {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     padding: 1rem;
   }
 
@@ -247,16 +271,33 @@
   }
 
   .project-content h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
+  }
+
+  .project-content > p {
+    font-size: 0.85rem;
   }
 
   .project-image {
     height: 180px;
   }
 
+  .project-details {
+    padding: 0.75rem;
+  }
+
+  .project-details p {
+    font-size: 0.8rem;
+  }
+
   .project-github-link {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.25rem;
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .project-section h4 {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.875rem;
   }
 }
 

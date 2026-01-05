@@ -50,6 +50,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -63,6 +64,7 @@ body {
   color: var(--text-primary);
   overflow-x: hidden;
   line-height: 1.6;
+  touch-action: pan-y;
 }
 
 h1, h2, h3, h4, h5, h6 {
