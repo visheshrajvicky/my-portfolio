@@ -13,7 +13,7 @@ const Header = () => {
       <h1>Vishesh Raj</h1>
       <IconContext.Provider value={{ size: '1.5em' }}>
         <nav>
-          <NavLink exact to="/" activeClassName="active" className={isMobile ? "icon-link" : ""}><FaHome /> Home</NavLink>
+          <NavLink exact to="/" activeClassName="active" className={isMobile ? "icon-link" : ""}><FaHome /> Homedf</NavLink>
           <NavLink to="/experience" activeClassName="active" className={isMobile ? "icon-link" : ""}><FaUserTie /> Experience</NavLink>
           <NavLink to="/projects" activeClassName="active" className={isMobile ? "icon-link" : ""}><FaProjectDiagram /> Projects</NavLink>
           <NavLink to="/skills" activeClassName="active" className={isMobile ? "icon-link" : ""}><FaCode /> Skills</NavLink>

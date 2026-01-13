@@ -195,11 +195,26 @@
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-  .about {
+  .home {
+    flex-direction: column;
+    padding: 6rem 2rem 2rem;
+    min-height: auto;
+  }
+
+  .home .content {
     position: static;
-    transform: none;
+    transform: none !important;
+    margin: 0 auto 3rem;
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .about {
+    position: static !important;
+    transform: none !important;
     margin: 3rem auto 0;
     max-width: 700px;
+    width: 100%;
   }
 }
 
@@ -225,12 +240,16 @@
 
 @media (max-width: 768px) {
   .home {
-    padding: 1rem;
+    padding: 5rem 1rem 1rem;
     min-height: auto;
+    flex-direction: column;
   }
 
   .home .content {
     padding: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 2rem;
   }
 
   .home .content h1 {
@@ -276,6 +295,7 @@
   .about {
     padding: 1.75rem;
     max-width: 100%;
+    width: 100%;
     margin: 2.5rem auto 0;
   }
 
@@ -290,8 +310,13 @@
 }
 
 @media (max-width: 480px) {
+  .home {
+    padding: 4.5rem 1rem 1rem;
+  }
+
   .home .content {
     padding: 1.25rem;
+    margin: 0 auto 1.5rem;
   }
 
   .home .content h1 {
@@ -336,6 +361,7 @@
   .about {
     padding: 1.5rem;
     margin: 2rem auto 0;
+    width: 100%;
   }
 
   .about h2 {

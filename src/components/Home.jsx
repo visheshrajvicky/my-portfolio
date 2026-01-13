@@ -11,16 +11,32 @@ import {ReactTyped} from 'react-typed';
 const Home = () => {
   const controls = useAnimation();
   const [showAbout, setShowAbout] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 1200);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const sequence = async () => {
       await controls.start({ opacity: 1, x: 0, transition: { duration: 1.5 } });
-      await controls.start({ x: '-95%', transition: { duration: 1.5 } });
+      
+      if (!isMobile) {
+        await controls.start({ x: '-95%', transition: { duration: 1.5 } });
+      }
+      
       setShowAbout(true);
     };
 
     sequence();
-  }, [controls]);
+  }, [controls, isMobile]);
 
   return (
     <section id="home" className="home">

@@ -2,58 +2,217 @@
     position: fixed;
     width: 100%;
     top: 0;
-    background: #282c34;
+    background: rgba(10, 14, 39, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 3rem;
     z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   }
   
   .navbar .logo {
-    color: white;
-    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .logo:hover {
+    transform: scale(1.05);
   }
   
   .navbar .menu {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
+    align-items: center;
   }
   
   .navbar .menu a {
-    color: white;
+    color: var(--text-secondary);
     text-decoration: none;
     cursor: pointer;
-    transition: color 0.3s;
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width 0.3s ease;
   }
   
   .navbar .menu a:hover {
-    color: #61dafb;
+    color: var(--primary-color);
+  }
+
+  .navbar .menu a:hover::after {
+    width: 100%;
+  }
+
+  .navbar .menu a.active {
+    color: var(--primary-color);
+  }
+
+  .navbar .menu a.active::after {
+    width: 100%;
   }
   
   .navbar .toggle {
     display: none;
-    color: white;
-    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.3s ease;
+    background: rgba(0, 217, 255, 0.1);
+    padding: 0.5rem;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(0, 217, 255, 0.2);
+  }
+
+  .navbar .toggle:hover {
+    background: rgba(0, 217, 255, 0.2);
+    transform: scale(1.1);
+  }
+
+  .navbar .toggle:active {
+    transform: scale(0.95);
+  }
+
+  /* Mobile Menu Backdrop */
+  .menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 999;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
   
+  @media (max-width: 1024px) {
+    .navbar {
+      padding: 1rem 2rem;
+    }
+
+    .navbar .menu {
+      gap: 2rem;
+    }
+
+    .navbar .menu a {
+      font-size: 0.95rem;
+    }
+  }
+
   @media (max-width: 768px) {
+    .navbar {
+      padding: 1rem 1.5rem;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+    }
+
     .navbar .menu {
       flex-direction: column;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background: #282c34;
-      width: 100%;
-      display: none;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      background: rgba(10, 14, 39, 0.98);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      width: 70%;
+      max-width: 300px;
+      height: 100vh;
+      padding: 5rem 2rem 2rem;
+      gap: 2rem;
+      align-items: flex-start;
+      border-left: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: -10px 0 50px rgba(0, 0, 0, 0.5);
+      transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      overflow-y: auto;
     }
   
     .navbar .menu.open {
-      display: flex;
+      right: 0;
+    }
+
+    .navbar .menu a {
+      width: 100%;
+      font-size: 1.1rem;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-md);
+      transition: all 0.3s ease;
+    }
+
+    .navbar .menu a:hover {
+      background: rgba(0, 217, 255, 0.1);
+      padding-left: 1.5rem;
+    }
+
+    .navbar .menu a::after {
+      display: none;
     }
   
     .navbar .toggle {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 0.875rem 1rem;
+    }
+
+    .navbar .logo {
+      font-size: 1.25rem;
+    }
+
+    .navbar .toggle {
+      font-size: 1.5rem;
+      padding: 0.4rem;
+    }
+
+    .navbar .menu {
+      width: 80%;
+      max-width: 280px;
+      padding: 4.5rem 1.5rem 1.5rem;
+    }
+
+    .navbar .menu a {
+      font-size: 1rem;
     }
   }
   

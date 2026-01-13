@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-scroll';
 import './App.css';
 
+import Navbar from './components/Navbar';
 import Home from './components/Home';
 // import About from './components/About';
 import Experience from './components/Experience';
@@ -17,88 +17,8 @@ const App = () => {
   return (
     <>
       <Loader />
+      <Navbar />
       <div className="App">
-      <nav className="nav">
-        <ul>
-          <li>
-            <Link 
-              to="home" 
-              smooth={true} 
-              duration={800}
-              spy={true}
-              activeClass="active"
-              offset={-80}
-            >
-              Home
-            </Link>
-          </li>
-          {/* <li>
-            <Link to="about" smooth={true} duration={500}>
-              About
-            </Link>
-          </li> */}
-          <li>
-            <Link 
-              to="experience" 
-              smooth={true} 
-              duration={800}
-              spy={true}
-              activeClass="active"
-              offset={-80}
-            >
-              Experience
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="projects" 
-              smooth={true} 
-              duration={800}
-              spy={true}
-              activeClass="active"
-              offset={-80}
-            >
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="skills" 
-              smooth={true} 
-              duration={800}
-              spy={true}
-              activeClass="active"
-              offset={-80}
-            >
-              Skills
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="education" 
-              smooth={true} 
-              duration={800}
-              spy={true}
-              activeClass="active"
-              offset={-80}
-            >
-              Education
-            </Link>
-          </li>
-          <li>
-            <Link 
-              to="certifications" 
-              smooth={true} 
-              duration={800}
-              spy={true}
-              activeClass="active"
-              offset={-80}
-            >
-              Certifications
-            </Link>
-          </li>
-        </ul>
-      </nav>
       <Home />
       {/* <About /> */}
       <Experience />
