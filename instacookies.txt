@@ -4,12 +4,12 @@
 #HttpOnly_.instagram.com	TRUE	/	TRUE	1795627149	ps_n	1
 #HttpOnly_.instagram.com	TRUE	/	TRUE	1795626762	datr	Cr_3aFjw26fX4KF2HgLqnudL
 .instagram.com	TRUE	/	TRUE	1792602831	ig_nrcb	1
-.instagram.com	TRUE	/	TRUE	1776598110	ds_user_id	80027522884
-.instagram.com	TRUE	/	TRUE	1803382110	csrftoken	xztKzO1i69miTyDyeCtSFRKAyX1f2pzW
+.instagram.com	TRUE	/	TRUE	1776599895	ds_user_id	80027522884
+.instagram.com	TRUE	/	TRUE	1803383895	csrftoken	xztKzO1i69miTyDyeCtSFRKAyX1f2pzW
 #HttpOnly_.instagram.com	TRUE	/	TRUE	1792603132	ig_did	0BF06891-F097-44D7-98FC-7DF91241A832
 #HttpOnly_.instagram.com	TRUE	/	TRUE	1795627149	ps_l	1
-.instagram.com	TRUE	/	TRUE	1769426876	wd	412x883
+.instagram.com	TRUE	/	TRUE	1769428697	wd	412x883
 .instagram.com	TRUE	/	TRUE	1795626765	mid	aPe_CgAEAAH4xwjDY6JBVj-HCd6u
 #HttpOnly_.instagram.com	TRUE	/	TRUE	1800358080	sessionid	80027522884%3AkxhvDTeV4q17fO%3A5%3AAYidzIHUgKG99Yzpdwg36Tl4nJnTOrNRc0RIwveARw
-.instagram.com	TRUE	/	TRUE	1769426876	dpr	3.5
-#HttpOnly_.instagram.com	TRUE	/	TRUE	1768909992	rur	"HIL\05480027522884\0541800358110:01fe1046122a435f041bff55fdaf04694d0d0fa3f8fd5bfb27d330318598b7bd7bb27087"
+.instagram.com	TRUE	/	TRUE	1769428697	dpr	3.5
+#HttpOnly_.instagram.com	TRUE	/	TRUE	1768910303	rur	"HIL\05480027522884\0541800359895:01fe99ee572f0ce2a0bfdd8b170be6b30349a70197d4e2bfaf306fdf6af84d5439b151f0"
